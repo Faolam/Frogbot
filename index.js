@@ -32,7 +32,7 @@ bot.once('ready', () => {
     console.log('=============== Estou Pronto Para Ser Usado! Bot : Frogbot ===============');
     console.log('==================================@@@@@===================================');
     let atividade_do_bot = [
-        `🦺 Trabalhando em atualizações - v2.5 🦺`,
+        `🦺 Trabalhando em atualizações - v2.8 🦺`,
         `🧱 Atualmente estou em manutenção 🧱`,
         `🐸 Siga o Frogman1 nas redes sociais! 🐸`,
         `🔵 https://twitter.com/Frogmaan 🔵`,
