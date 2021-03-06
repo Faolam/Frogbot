@@ -1,5 +1,6 @@
 // Trazendo informações sobre o discord para o desenvolvimento do comando de novos vídeos...
 const Discord = require('discord.js');
+const ytdl = require('ytdl-core')
 
 // Dando início ao desenvolvimento do comando de video
 const execute = (bot,msg,args) => {
@@ -61,12 +62,13 @@ const execute = (bot,msg,args) => {
         return msg.author.send(MessageEmbedAjuda1).catch(err => msg.channel.send(MessageEmbedError))
     }
     const CanalDosVideos = msg.guild.channels.cache.find(cda => cda.id === "816363150160298034")
+    const tumb = ytdl.getURLVideoID(link)
 
     // Inicio ao CanalDosVideos
     const MessageVideoNovo = new Discord.MessageEmbed()
     .setTimestamp()
     .setAuthor(`© Frogbot 2021 Sistema de Novos Vídeos`, bot.user.displayAvatarURL({dynamic: true, format: "png", size: 1024}))
-    .setThumbnail("https://i.ytimg.com/vi/W22Bh4GYW80/maxresdefault.jpg")
+    .setThumbnail(`https://img.youtube.com/vi/${tumb}/maxresdefault.jpg`)
     .setTitle(Titulo)
     .setURL(link)
     .setColor("RANDOM")
