@@ -32,7 +32,7 @@ bot.once('ready', () => {
     console.log('=============== Estou Pronto Para Ser Usado! Bot : Frogbot ===============');
     console.log('==================================@@@@@===================================');
     let atividade_do_bot = [
-        `🦺 Trabalhando em atualizações - v2.8 🦺`,
+        `🦺 Trabalhando em atualizações - v3.1 🦺`,
         `🧱 Atualmente estou em manutenção 🧱`,
         `🐸 Siga o Frogman1 nas redes sociais! 🐸`,
         `🔵 https://twitter.com/Frogmaan 🔵`,
@@ -54,6 +54,9 @@ bot.once('ready', () => {
 bot.on("message", (msg) => {
     if (!msg.content.startsWith(process.env.PREFIX) || msg.author.bot) return;
 
+    if (msg.channel.type === "dm") return msg.author.send(`Sou um Robô direcionado apenas ao servidor do Frogman1. Mensagens na dm como essa aqui ` + "`" + `${msg.content}` + "`" + ` não são conhecidas nem utilizadas como comandos externos!`)
+    
+
     const args = msg.content.slice(process.env.PREFIX.length).split(" ");
     const command = args.shift().toLowerCase();
 
@@ -65,5 +68,5 @@ bot.on("message", (msg) => {
 });
 
 
-// Colocando a Matrix para rodar!
+// Colocando o Frogbot para rodar!
 bot.login(process.env.TOKEN);

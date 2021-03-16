@@ -18,6 +18,8 @@ const execute = (bot,msg,args) => {
     .addField(`📍 ${process.env.PREFIX}pause`, `Pausa a música atual!`, true)
     .addField(`📍 ${process.env.PREFIX}resume`, `Volta a reprodução das músicas!`, true)
     .addField(`📍 ${process.env.PREFIX}stop`, `Para a reprodução de todas as músicas!`, true)
+    .addField(`📍 ${process.env.PREFIX}fila`, `Exibe as músicas em fila e em reprodução neste servidor`, true)
+    .addField(`📍 ${process.env.PREFIX}som`, `Altera meu volume neste servidor.`, true)
     .setImage('https://thumbs.gfycat.com/SpectacularFinishedBasilisk-size_restricted.gif')
     .setFooter(`${msg.author.username} este comando irá ajuda-lo a entender como funcionam os comandos de musica!`, msg.author.displayAvatarURL({dynamic: true, format: "png", size: 1024}))
 
