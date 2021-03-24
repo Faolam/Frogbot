@@ -17,6 +17,7 @@ const execute = (bot,msg,args) => {
         .addField(`💣 ${process.env.PREFIX}sinfo`, "Nesse comando apresento informações sobre este servidor!", true)
         .addField(`💣 ${process.env.PREFIX}musica`, "Neste comando são ditas as informações sobre o comando de música!", true)
         .addField(`💣 ${process.env.PREFIX}ping`, "Neste comando são ditas as informações sobre meu ping e latência!", true)
+        .addField(`💣 ${process.env.PREFIX}info`, "Aqui mostrarei as informações de um usuário!", true)
         .addField(`💣 ${process.env.PREFIX}report "Problema encontrado"`, "Utilize esse comando para avisar nossa equipe sobre os comandos ou funcionalidades que precisam ser ajustados!", true)
         .setFooter(`⛔ ${msg.author.username}, é preciso que o comando solicitado seja semelhante ao exposto aqui!`);
 

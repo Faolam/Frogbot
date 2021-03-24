@@ -38,7 +38,7 @@ const execute = (bot,msg,args) => {
         .setTimestamp()
         .setAuthor(`© Frogbot 2021 Sistema de Novos Vídeos`, bot.user.displayAvatarURL({dynamic: true, format: "png", size: 1024}))
         .setTitle(`Aviso ao Usuário MANEGE : \`${msg.author.username}\``)
-        .setDescription(`\`${msg.author.username}\` parece que você esqueceu de adicionar os campos de link e título do vídeo! Tente novamente dessa forma: \n\`${process.env.PREFIX}live "Título do Vídeo" / "Link do Vídeo"\``)
+        .setDescription(`\`${msg.author.username}\` parece que você esqueceu de adicionar os campos de link e título do vídeo! Tente novamente dessa forma: \n\`${process.env.PREFIX}video "Título do Vídeo" / "Link do Vídeo"\``)
         .setThumbnail("https://www.teclasap.com.br/wp-content/uploads/2010/02/help.png")
         .setColor("RANDOM")
         .setFooter(`Aviso ao Usuário MANAGE Tag : \`${msg.author.tag}\``, msg.author.displayAvatarURL({dynamic: true, format: "png", size: 1024}))
@@ -53,15 +53,15 @@ const execute = (bot,msg,args) => {
         const MessageEmbedAjuda1 = new Discord.MessageEmbed()
         .setTimestamp()
         .setAuthor(`© Frogbot 2021 Sistema de Novos Vídeos`, bot.user.displayAvatarURL({dynamic: true, format: "png", size: 1024}))
-        .setTitle(`Aviso ao Usuário MANEGE : \`${msg.author.username}\``)
-        .setDescription(`\`${msg.author.username}\` parece que você esqueceu de adicionar o campo de link do vídeo! Tente novamente dessa forma: \n\`${process.env.PREFIX}live "Título do Vídeo" / "Link do Vídeo"\``)
+        .setTitle(`Aviso ao Usuário MANAGE : \`${msg.author.username}\``)
+        .setDescription(`\`${msg.author.username}\` parece que você esqueceu de adicionar o campo de link do vídeo! Tente novamente dessa forma: \n\`${process.env.PREFIX}video "Título do Vídeo" / "Link do Vídeo"\``)
         .setThumbnail("https://www.teclasap.com.br/wp-content/uploads/2010/02/help.png")
         .setColor("RANDOM")
         .setFooter(`Aviso ao Usuário MANAGE Tag : \`${msg.author.tag}\``, msg.author.displayAvatarURL({dynamic: true, format: "png", size: 1024}))
         // Fim da mensagem de ajuda 1
         return msg.author.send(MessageEmbedAjuda1).catch(err => msg.channel.send(MessageEmbedError))
     }
-    const CanalDosVideos = msg.guild.channels.cache.find(cda => cda.id === "816363150160298034")
+    const CanalDosVideos = msg.guild.channels.cache.find(cda => cda.id === "821498858269966356")
     const tumb = ytdl.getURLVideoID(link)
 
     // Inicio ao CanalDosVideos
