@@ -4,7 +4,6 @@ const bot = new Discord.Client(); // Passando que o nome que se refere ao Frogbo
 const dotenv = require("dotenv"); // Biblioteca para facilitar o desenvolvimento
 const fs = require("fs"); // Outra biblioteca para facilitar o desenvolvimento
 const path = require("path"); // Puxando variáveis do path.
-const moment = require('moment');
 
 // Puxar informações do arquivo env.
 dotenv.config(); // Trazendo a Central de configurações do dotenv 
@@ -21,6 +20,9 @@ for (var filename of commandFiles) {
     bot.commands.set(command.name, command);
 };
 
+// Tentativa de importar pastas e arquivos 
+const AdmCommand1 = require('./AdmCommands/Kick')
+// Fim da tentativa 
 
 // Aba para as requisições de música
 bot.queues = new Map();
@@ -31,6 +33,9 @@ bot.once('ready', () => {
     console.log('==================================@@@@@===================================');
     console.log('=============== Estou Pronto Para Ser Usado! Bot : Frogbot ===============');
     console.log('==================================@@@@@===================================');
+// AdmCommands For Adiministrators
+    AdmCommand1(bot);
+// Exit Code for administrators
     let atividade_do_bot = [
         `🦺 Trabalhando em atualizações - v3.1 🦺`,
         `🧱 Atualmente estou em manutenção 🧱`,
