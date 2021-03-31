@@ -14,7 +14,7 @@ const execute = (bot,msg,args) => {
         .setTitle(`${PC} Config Pc do FROGMAN1 ${PC}`)
         .setThumbnail("https://panels-images.twitch.tv/panel-165040132-image-b9720317-9c53-4c25-938e-e28c847a3396")
         .setColor("#00FA9A")
-        .setDescription(`${DEV} Mais informações em : *https://www.twitch.tv/frogman1/about* ${DEV}`)
+        .setDescription(`${DEV} Mais informações em : ${DEV} \n*https://www.twitch.tv/frogman1/about*`)
         .addField(`${TWITCH} GPU`, "RTX 2080 Super HOF", true)
         .addField(`${TWITCH} CPU`, "Intel Core I9-9900k @ 3.6Ghz (5.0Ghz) OC", true)
         .addField(`${TWITCH} Motherboard`, "MSI Z390-A PRO LGA 1151", true)
