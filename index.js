@@ -23,6 +23,7 @@ for (var filename of commandFiles) {
 // Tentativa de importar pastas e arquivos 
 const AdmCommand1 = require('./AdmCommands/Kick')
 const AdmCommand2 = require('./AdmCommands/ban')
+const AdmCommand3 = require('./AdmCommands/GuildMemberAdd')
 // Fim da tentativa 
 
 // Aba para as requisições de música
@@ -37,9 +38,10 @@ bot.once('ready', () => {
 // AdmCommands For Adiministrators
     AdmCommand1(bot);
     AdmCommand2(bot);
+    AdmCommand3(bot)
 // Exit Code for administrators
     let atividade_do_bot = [
-        `😵 Trabalhando em atualizações - v8.9 😵`,
+        `😵 Trabalhando em atualizações - v9.0 😵`,
         `💤 Atualmente estou em manutenção 💤`,
         `🐸 Siga o Frogman1 nas redes sociais! 🐸`,
         `🔵 https://twitter.com/Frogmaan 🔵`,

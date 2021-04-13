@@ -42,7 +42,7 @@ const execute = (bot,msg,args) => {
 
 
 // Aba para o module exports. Informações.
-module.exports ={
+module.exports = {
     name: "config",
     help: "Mostrará as informações do pc do FROGMAN1!",
     execute,
